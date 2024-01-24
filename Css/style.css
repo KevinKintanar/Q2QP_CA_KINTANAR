@@ -31,7 +31,7 @@ nav{
     border: 0.2vh solid red;
     color: black;
     
-    background-image: url(Images/Logo.jpg);
+    background-image: url(../Images/Logo.jpg);
     background-size: contain;
     background-repeat: no-repeat;
 
