@@ -797,7 +797,7 @@ ul#menu6 > li{
 .socmed1{
     background-size: cover;
     background-repeat: no-repeat;
-    background: url(Images/spritesheet.png) no-repeat -1px -51px;
+    background: url(../Images/spritesheet.png) no-repeat -1px -51px;
     width: 25px;
 	height: 25px;
     
@@ -811,7 +811,7 @@ ul#menu6 > li{
     background-color: white;
     background-size: cover;
     background-repeat: no-repeat;
-    background: url(Images/spritesheet.png) no-repeat -51px -51px;
+    background: url(../Images/spritesheet.png) no-repeat -51px -51px;
     width: 25px;
 	height: 25px;
 
@@ -824,7 +824,7 @@ ul#menu6 > li{
 .socmed3{
     background-size: cover;
     background-repeat: no-repeat;
-    background: url(Images/spritesheet.png) no-repeat -151px -51px;
+    background: url(../Images/spritesheet.png) no-repeat -151px -51px;
     width: 25px;
 	height: 25px;
     
@@ -1341,7 +1341,7 @@ ul.submenui2 li a:hover{
     height: 75vh;
     border: 0vh solid black;
     margin-left: 2.5vh;
-    background-image: url(Images/image1.jpg);
+    background-image: url(../Images/image1.jpg);
     background-size: cover;
 
 }
@@ -1362,7 +1362,7 @@ ul.submenui2 li a:hover{
 
 .whoweareimage{
     position: absolute;
-    background-image: url(Images/image1.jpg);
+    background-image: url(../Images/image1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
    
