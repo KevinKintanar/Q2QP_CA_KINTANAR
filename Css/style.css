@@ -1,0 +1,2171 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/** font-family: "Bebas Neue", sans-serif; **/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/**  font-family: "Montserrat", sans-serif;  **/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/********* MAKING THE NAVIGATION BAR ***************/
+
+nav {
+
+    z-index: 2;
+    height: 11vh;
+    width: 100%;
+    border: 0vh solid black;
+    background-color: white;
+    position: fixed;
+}
+
+.logo {
+    position: absolute;
+    display: inline-block;
+
+    border: 0.2vh solid red;
+    color: black;
+
+    background-image: url(../Images/logo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border: 0vh;
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+
+    margin-bottom: 3vh;
+}
+
+.name1 {
+    display: inline-block;
+    font-size: 4vh;
+    color: black;
+    text-align: left;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.name2 {
+    display: inline-block;
+    font-size: 2vh;
+    color: black;
+    text-align: left;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.namebox {
+    display: inline-block;
+    border: 0vh solid black;
+    height: 8vh;
+    width: 40vh;
+    margin-top: 1.3vh;
+    margin-left: 10vh;
+
+    word-break: break-all;
+}
+
+/** NAVIGATION FIRST DROPDOWN **/
+
+ul#menu>li {
+    position: fixed;
+    margin-top: -7.5vh;
+    margin-right: 54vh;
+    float: right;
+    list-style-type: none;
+    position: relative;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #4169E1;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.buttontext {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0.76vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #00166A;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenu {
+    max-height: 41.6vh;
+    transition: max-height 0.5s ease-in;
+}
+
+ul.submenu {
+    z-index: 1;
+    border: 0vh solid black;
+    width: 9vw;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+}
+
+ul.submenu li a {
+    border: 0.4vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+ul.submenu li a:hover {
+    background: #006022;
+}
+
+/** NAVIGATION SECOND DROPDOWN **/
+
+ul#menu1>li {
+    position: fixed;
+    margin-top: -7.5vh;
+    margin-right: 28vh;
+    float: right;
+    list-style-type: none;
+    position: relative;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    padding: 0.5vh;
+    border: 0.4vh solid black;
+    background-color: #4169E1;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0.76vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover input:checked~label {
+    background: #00166A;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+
+input {
+    display: none
+}
+
+input:checked~ul.submenu1 {
+    max-height: 46vh;
+    transition: max-height 0.5s ease-in;
+}
+
+ul.submenu1 {
+    z-index: 1;
+    border: 0vh solid black;
+    width: 9vw;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+}
+
+ul.submenu1 li a {
+    border: 0.4vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+ul.submenu1 li a:hover {
+    background: #006022;
+}
+
+/** NAVIGATION THIRD DROPDOWN **/
+
+ul#menu2>li {
+    z-index: 1;
+    margin-top: -7.5vh;
+    margin-left: 89vw;
+    float: left;
+    list-style-type: none;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    padding: 0.5vh;
+    border: 0.4vh solid black;
+    background-color: #4169E1;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0.76vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover input:checked~label {
+    background: #00166A;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenu2 {
+    max-height: 46vh;
+    transition: max-height 0.5s ease-in;
+}
+
+ul.submenu2 {
+    z-index: 1;
+    border: 0vh solid black;
+    width: 9vw;
+    margin-top: 1vh;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+}
+
+ul.submenu2 li a {
+    border: 0.4vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+ul.submenu2 li a:hover {
+    background: #006022;
+}
+
+/** VISIT THE ADVOCACY BUTTON **/
+.helpbutton {
+    z-index: 2;
+    height: 6.5vh;
+    width: 25vh;
+    border: 0.6vh solid black;
+    border-radius: 0.5vh;
+    background-color: #4169E1;
+    margin-top: -7.5vh;
+    margin-left: 44vw;
+}
+
+.helpbuttontext {
+    z-index: 2;
+    font-size: 3.5vh;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+
+    text-align: center;
+    cursor: pointer;
+    margin-top: 1vh;
+}
+
+.helpbuttontext a{
+    color: black;
+    text-decoration: none;
+}
+
+.helpbutton:hover {
+    background-color: #00166A;
+    transition: 0.3s;
+}
+
+/************************************************* MAKING THE BODY OF PAGE 1 *********************************/
+
+/** SLOGAN **/
+
+.vbox video {
+    height: 120vh;
+    width: 100vw;
+}
+
+.vbox {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    border: 0.2vh;
+    height: 40vh;
+    overflow: hidden;
+    opacity: 80%;
+    background-size: cover;
+}
+
+.sloganbox {
+    z-index: 2;
+    height: 8vh;
+    width: 40vh;
+    margin-top: -25vh;
+    word-break: break-all;
+    opacity: 100%;
+}
+
+.slogan1 {
+    z-index: 2;
+    font-size: 10vh;
+    width: 40vw;
+    color: #006022;
+    text-align: left;
+    font-family: "Bebas Neue", sans-serif;
+    fill-opacity: 100%;
+    text-shadow: 0.4vh 0.4vh black;
+}
+
+.sloganslide {
+    animation: sloganslide 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes sloganslide {
+    0% {
+        transform: translate(-10vh, 0);
+    }
+
+    100% {
+        transform: translate(2vh, 0);
+    }
+}
+
+
+.slogan2 {
+    z-index: 2;
+    font-size: 6vh;
+    width: 32vw;
+    border: 0vh solid black;
+    color: #00166A;
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: 2vh;
+    fill-opacity: 100%;
+    text-shadow: 0.3vh 0.3vh black;
+}
+
+/** BACKGROUND **/
+
+.backgroundvideo video {
+    margin-top: -70vh;
+    z-index: 4;
+    overflow-x: hidden;
+    margin-right: 4vh;
+    margin-bottom: 5vh;
+}
+
+article {
+    height: 100%;
+    width: 100%
+}
+
+.backgroundvideo video {
+    height: 45vh;
+    width: 43vw;
+}
+
+.backgroundvideo {
+    z-index: 4;
+    float: right;
+}
+
+.backgroundtitle {
+    font-size: 8vh;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+
+    margin-top: 20vh;
+    margin-left: 7vh;
+
+    text-shadow: 0.3vh 0.3vh grey;
+}
+
+.backgroundtitleslide {
+    animation: backgroundtitleslide 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes backgroundtitleslide {
+    0% {
+        transform: translate(-10vh, 0);
+    }
+
+    100% {
+        transform: translate(2vh, 0);
+    }
+}
+
+.backgroundtextbox {
+    border: 0vh solid black;
+    height: 30vh;
+    width: 50vw;
+    margin-left: 2vh;
+    margin-bottom: 8vh;
+}
+
+.backgroundtext {
+    font-size: 3vh;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+.backgroundtextslide {
+    animation: backgroundtitleslide 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes backgroundtextslide {
+    0% {
+        transform: translate(-10vh, 0);
+    }
+
+    100% {
+        transform: translate(2vh, 0);
+    }
+}
+
+/** ACHIEVEMENTS **/
+
+.achievementbackground {
+    background-color: #4169E1;
+    border: 0vh solid black;
+    height: 255vh;
+    width: 100vw;
+}
+
+.achievementtitlebox {
+    border: 0vh solid black;
+    width: 30vw;
+    height: 10vh;
+    word-wrap: break-word;
+}
+
+.achievementtitle {
+    font-size: 10vh;
+    position: absolute;
+    left: 16.5vw;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    text-shadow: 0.4vh 0.4vh black;
+}
+
+.achievementsubtitletext {
+    color: white;
+    font-size: 6vh;
+    font-family: "Bebas Neue", sans-serif;
+    text-shadow: 0.4vh 0.4vh black;
+    text-align: center;
+    width: 92vw;
+    margin-right: -15vh;
+}
+
+
+.achievementtextbox {
+    position: absolute;
+    border: 0vh solid black;
+    height: 30vh;
+    width: 40vw;
+    margin-left: 4vh;
+    margin-top: 14vh;
+}
+
+.achievementtext {
+    font-size: 3vh;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+@keyframes achievementboldtext1colorchange {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+@keyframes achievementboldtext2colorchange {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: #006022;
+    }
+}
+
+@keyframes achievementboldtext3colorchange {
+    0% {
+        color: white;
+    }
+
+    100% {
+        color: pink;
+    }
+}
+
+@keyframes achievementboldtext4colorchange {
+    0% {
+        color: white
+    }
+
+    25% {
+        color: red
+    }
+
+    50% {
+        color: #006022
+    }
+
+    75% {
+        color: pink
+    }
+
+    100% {
+        color: white
+    }
+}
+
+.achievementboldtext1 {
+    font-size: 5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    text-shadow: 0.4vh 0.4vh black;
+    animation: 20s achievementboldtext1colorchange;
+    animation-fill-mode: both;
+}
+
+
+.achievementboldtext2 {
+    font-size: 5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    text-shadow: 0.4vh 0.4vh black;
+    animation: 20s achievementboldtext2colorchange;
+    animation-fill-mode: both;
+}
+
+.achievementboldtext3 {
+    font-size: 5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    text-shadow: 0.4vh 0.4vh black;
+    animation: 20s achievementboldtext3colorchange;
+    animation-fill-mode: both;
+}
+
+.achievementboldtext4 {
+    font-size: 5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    text-shadow: 0.4vh 0.4vh black;
+    animation: 20s achievementboldtext4colorchange;
+    animation-fill-mode: both;
+}
+
+
+.spacer {
+    border: 0vh solid black;
+    height: 5vh;
+    width: auto;
+}
+
+.spacer1 {
+    border: 0vh solid black;
+    height: 1vh;
+    width: auto;
+}
+
+/** ACHIEVEMENT FIRST DROPDOWN **/
+
+ul#menu3>li {
+    position: fixed;
+    margin-top: 27.4vh;
+    float: right;
+    margin-right: -21.5vw;
+    list-style-type: none;
+    position: relative;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.buttontext1 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenu3 {
+    max-height: 60vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu3 {
+    z-index: 1;
+    border: 0vh solid black;
+    width: 50vw;
+    margin-top: 1vh;
+    margin-left: -42vh;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu3 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu3 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+/** ACHIEVEMENT SECOND DROPDOWN **/
+ul#menu4>li {
+    margin-top: 72vh;
+    float: right;
+    margin-right: -21.5vw;
+    list-style-type: none;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.buttontext1 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenu4 {
+    max-height: 60vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu4 {
+    z-index: 1;
+    border: 0vh solid black;
+    width: 50vw;
+    margin-top: 1vh;
+    margin-left: -42vh;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu4 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu4 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+/** ACHIEVEMENT THIRD DROPDOWN **/
+ul#menu5>li {
+    margin-top: 115.5vh;
+    float: right;
+    margin-right: -21.5vw;
+    list-style-type: none;
+    position: relative;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.buttontext1 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenu5 {
+    max-height: 60vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu5 {
+    z-index: 1;
+    border: 0vh solid black;
+    width: 50vw;
+    margin-top: 1vh;
+    margin-left: -42vh;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu5 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu5 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+/** ACHIEVEMENT FOURTH DROPDOWN **/
+ul#menu6>li {
+    margin-top: 154vh;
+    float: right;
+    margin-right: -21.5vw;
+    list-style-type: none;
+    position: relative;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.buttontext1 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenu6 {
+    max-height: 60vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu6 {
+    z-index: 1;
+    border: 0vh solid black;
+    width: 50vw;
+    margin-top: 1vh;
+    margin-left: -42vh;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu6 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenu6 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+
+/********* MAKING THE FOOTER ***************/
+.footerbackground {
+    z-index: 99;
+    height: 7vh;
+    width: 100vw;
+    border: 0vh solid black;
+    padding: 0.5vh;
+    background-image: linear-gradient(#4169E1, #2444a1, #001A66);
+    position: fixed;
+    bottom: 0;
+}
+
+.socmedbox {
+    border: 0vh solid black;
+    height: 7vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.socmed1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: url(../Images/spritesheet.png) no-repeat -1px -51px;
+    width: 25px;
+    height: 25px;
+
+    margin-left: 94vw;
+
+    margin-top: -4.4vh;
+    position: fixed;
+}
+
+.socmed2 {
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: url(../Images/spritesheet.png) no-repeat -51px -51px;
+    width: 25px;
+    height: 25px;
+
+    margin-left: 91vw;
+
+    margin-top: -4.4vh;
+    position: fixed;
+}
+
+.socmed3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: url(../Images/spritesheet.png) no-repeat -151px -51px;
+    width: 25px;
+    height: 25px;
+
+    margin-left: 88vw;
+
+    margin-top: -4.4vh;
+    position: fixed;
+}
+
+.copyrighttext {
+    font-size: 3vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+/********************************** MAKING THE BODY OF THE SECOND PAGE ***********************************************/
+
+/** INTIATIVE **/
+.intiativebackground {
+    z-index: 0;
+    border: 0.3vh solid black;
+    height: 180vh;
+    width: 100vw;
+    background-color: #4169E1;
+}
+
+
+@keyframes initiativetextslide {
+    0% {
+        transform: translate(-10vh, 0);
+    }
+
+    100% {
+        transform: translate(2vh, 0);
+    }
+}
+
+.intiativetitlebox {
+    height: 10vh;
+    width: 100vw;
+    margin-top: 10vh;
+}
+
+.intiativetitle {
+    z-index: 99;
+    font-size: 10vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-shadow: 0.4vh 0.4vh black;
+    animation: 2s initiativetextslide;
+    animation-fill-mode: both;
+}
+
+.initiative1box {
+    border-radius: 0.5vh;
+    padding: 2vh;
+    background-color: #1DB954;
+    z-index: 98;
+    height: 52.8vh;
+    width: 80vw;
+    border: 0.4vh solid black;
+    margin-top: 6vh;
+    margin-left: 8vh;
+    box-shadow: -2vh -2vh;
+}
+
+.intiativeboldtext1 {
+    font-size: 4.5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    animation: 20s initiativeboldtext1colorchange;
+    animation-fill-mode: both;
+}
+
+@keyframes initiativeboldtext1colorchange {
+    0% {
+        color: #006022;
+    }
+
+    50% {
+        color: white
+    }
+
+    100% {
+        color: #001A66;
+    }
+}
+
+.intiativetext1 {
+    font-size: 3vh;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    animation: 2s initiativetextslide;
+    animation-fill-mode: both;
+}
+
+.intiativetitle {
+    z-index: 99;
+    font-size: 10vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-shadow: 0.4vh 0.4vh black;
+    animation: 2s initiativetextslide;
+    animation-fill-mode: both;
+}
+
+.intiativeboldtext2 {
+    font-size: 4.5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    animation: 20s initiativeboldtext2colorchange;
+    animation-fill-mode: both;
+}
+
+@keyframes initiativeboldtext2colorchange {
+    0% {
+        color: #1DB954;
+    }
+
+    100% {
+        color: pink;
+    }
+}
+
+.initiative2box {
+    float: right;
+    border-radius: 0.5vh;
+    padding: 2vh;
+    background-color: #1DB954;
+    z-index: 98;
+    height: 73vh;
+    width: 80vw;
+    border: 0.4vh solid black;
+    margin-top: 6vh;
+    margin-right: 10vh;
+    box-shadow: 2vh -2vh;
+}
+
+.intiativetext2 {
+    font-size: 3vh;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+.activities_involvementsbox {
+    margin-top: 97vh;
+    border: 0vh solid black;
+    width: 98.5vw;
+    height: 130vh;
+}
+
+.involvementsbox {
+    border: 0vh solid black;
+    height: 100vh;
+    width: 49vw;
+}
+
+.involvementstitlebox {
+    border: 0vh solid black;
+    height: 10vh;
+    width: 49vw;
+}
+
+.involvementstitle {
+    font-size: 10vh;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    text-shadow: 0.3vh 0.3vh gray;
+}
+
+/** INITIATIVE FIRST DROPDOWN **/
+ul#menui1>li {
+    margin-top: 8vh;
+    position: fixed;
+    float: right;
+    list-style-type: none;
+    position: relative;
+    float: left;
+    margin-left: 2vh;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.buttontext1 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenui1 {
+    max-height: 60vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenui1 {
+    padding: 2vh;
+    z-index: 1;
+    border: 0vh solid black;
+    width: 37.5vw;
+    margin-top: -15vh;
+    margin-left: 20vh;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenui1 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenui1 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+.buttontext2 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 2vh;
+    text-align: center;
+}
+
+.buttontext3 {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 2.5vh;
+    text-align: center;
+}
+
+/** INITIATIVE SECOND DROPDOWN **/
+
+ul#menui2>li {
+    margin-top: 52.5vh;
+    position: fixed;
+    float: right;
+    list-style-type: none;
+    position: relative;
+    float: right;
+    margin-left: 2vh;
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.buttontext1 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenui2 {
+    max-height: 60vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenui2 {
+    padding: 2vh;
+    z-index: 1;
+    border: 0vh solid black;
+    width: 37.5vw;
+    margin-top: -15vh;
+    margin-left: -80vh;
+    border-radius: 0.5vh;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenui2 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenui2 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+/** ACTIVITIES **/
+
+.activitiesbox {
+    border: 0vh solid black;
+    height: 100vh;
+    width: 49vw;
+    float: right;
+    margin-top: -90vh;
+}
+
+.activitiestitlebox {
+    border: 0vh solid black;
+    height: 10vh;
+    width: 49vw;
+    float: right;
+    margin-top: -10vh;
+}
+
+.activitiestitle {
+    font-size: 10vh;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    text-shadow: 0.3vh 0.3vh gray;
+}
+
+.activity1box {
+    box-shadow: -2vh -2vh;
+    background-color: #1DB954;
+    border: 0.3vh solid black;
+    width: 40vw;
+    height: 30vh;
+    margin-top: 5vh;
+    padding: 2vh;
+    margin-left: 5vh;
+    border-radius: 0.5vh;
+}
+
+.activity1text {
+    font-size: 3vh;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+}
+
+@keyframes activityboldtextcolorchange {
+    0% {
+        color: #1DB954;
+    }
+
+    100% {
+        color: #001A66;
+    }
+}
+
+.activityboldtext1 {
+    font-size: 4.5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    animation: 20s activityboldtextcolorchange;
+    animation-fill-mode: both;
+}
+
+.activityboldtext2 {
+    font-size: 4.5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    animation: 20s initiativeboldtext2colorchange;
+    animation-fill-mode: both;
+}
+
+
+.activity2box {
+    box-shadow: 2vh 2vh;
+    background-color: #1DB954;
+    border: 0.3vh solid black;
+    width: 40vw;
+    height: 55vh;
+    margin-top: 6.5vh;
+    margin-left: 12vh;
+    padding: 2vh;
+    border-radius: 0.5vh;
+}
+
+@keyframes activityboldtext3colorchange {
+    0% {
+        color: #1DB954;
+    }
+
+    100% {
+        color: purple;
+    }
+}
+
+@keyframes activityboldtext4colorchange {
+    0% {
+        color: #1DB954;
+    }
+
+    100% {
+        color: yellow;
+    }
+}
+
+.activityboldtext3 {
+    font-size: 4.5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    animation: 20s activityboldtext3colorchange;
+    animation-fill-mode: both;
+}
+
+.activityboldtext4 {
+    font-size: 4.5vh;
+    color: white;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    animation: 20s activityboldtext4colorchange;
+    animation-fill-mode: both;
+}
+
+/******************************************* MAKING THE BODY OF PAGE 3 ******************************************/
+
+/** WHO WE ARE **/
+.whoweareimagebox {
+    width: 30vw;
+    height: 70vh;
+    border: 0vh solid black;
+    margin-left: 2.5vh;
+    background-image: url(../Images/image1.jpg);
+    background-size: cover;
+
+}
+
+.whowearevmbox {
+    border: 0vh solid black;
+    height: 250vh;
+    width: 100vw;
+}
+
+.whowearebox {
+    position: absolute;
+    height: 40vh;
+    width: 100vw;
+    border: 0vh solid black;
+    margin-top: 11vh;
+}
+
+.whoweareimage {
+    position: absolute;
+    background-image: url(../Images/image1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.whowearetitle {
+    font-size: 8vh;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    text-shadow: 0.3vh 0.3vh grey;
+    text-align: center;
+    margin-top: -2vh;
+}
+
+.whowearetitleslide {
+    animation: backgroundtitleslide 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes whowearetitleslide {
+    0% {
+        transform: translate(-10vh, 0);
+    }
+
+    100% {
+        transform: translate(2vh, 0);
+    }
+}
+
+.whowearetextbox {
+    border: 0vh solid black;
+    height: 30vh;
+    width: 62.5vw;
+    float: right;
+    margin-right: 12vh;
+    margin-bottom: 8vh;
+}
+
+.whowearetext {
+    font-size: 3vh;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+.whowearetextslide {
+    animation: backgroundtitleslide 2s;
+    animation-fill-mode: forwards;
+}
+
+/** VISSION & MISSION **/
+.vmbox {
+    position: absolute;
+    border: 0vh solid black;
+    height: 40vh;
+    width: 100vw;
+    margin-top: 92.5vh;
+}
+
+.menuvmbox1 {
+    height: 7.5vh;
+    width: 98.5vw;
+    border: 0vh solid black;
+}
+
+/** VISION DROPDOWN **/
+
+ul#menuvm1>li {
+    position: fixed;
+    list-style-type: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttontext1 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 0.7vh;
+    font-size: 4vh;
+    text-align: center;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenuvm1 {
+    max-height: 60vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenuvm1 {
+    padding: 2vh;
+    z-index: 1;
+    border: 0vh solid black;
+    width: 60vw;
+    border-radius: 0.5vh;
+    margin-top: 1.5vh;
+    margin-left: 19.5vw;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenuvm1 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenuvm1 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+.buttontext4 {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: -0.1vh;
+    font-size: 3.5vh;
+    text-align: center;
+    margin-top: 0.5vh;
+}
+
+/** MISSION DROPDOWN **/
+
+.menuvmbox2 {
+    height: 7.5vh;
+    width: 98.5vw;
+    border: 0vh solid black;
+    margin-top: 45vh;
+}
+
+ul#menuvm2>li {
+    position: fixed;
+    list-style-type: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -13.5vh;
+
+}
+
+label {
+    border-radius: 0.5vh;
+    height: 6vh;
+
+    border: 0.4vh solid black;
+    background-color: #1DB954;
+    width: 6.5vw;
+
+    position: relative;
+    display: block;
+
+    padding: 0 2.7vh 0 1.8vh;
+
+    transition: background 0.3s;
+    cursor: pointer;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label:after {
+
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 10vh;
+    width: 0;
+    height: 0;
+}
+
+label:hover,
+input:checked~label {
+    background: #006022;
+}
+
+input:checked~label:after {
+    transition: border-top .1s, border-bottom .1s .1s;
+}
+
+input {
+    display: none
+}
+
+input:checked~ul.submenuvm2 {
+    max-height: 120vh;
+    transition: max-height 0.5s ease-in;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenuvm2 {
+    padding: 2vh;
+    z-index: 1;
+    border: 0vh solid black;
+    width: 60vw;
+    border-radius: 0.5vh;
+    margin-top: 1.5vh;
+    margin-left: 19.5vw;
+
+    max-height: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    list-style-type: none;
+
+
+    background: #1DB954;
+    transition: max-height 0.5s ease-out;
+    position: absolute;
+
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenuvm2 li a {
+    border: 0vh solid black;
+    display: block;
+    padding: 1.9vh;
+    color: black;
+    text-decoration: none;
+    transition: background .3s;
+    white-space: nowrap;
+
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    box-shadow: 2vh 2vh;
+}
+
+ul.submenuvm2 li a:hover {
+    background: #006022;
+    box-shadow: 2vh 2vh;
+}
+
+.buttontext5 {
+    font-size: 4.5vh;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+}
+
+/** HOW TO HELP **/
+
+.howtohelpbackground {
+    position: absolute;
+    border: 0vh solid black;
+    width: 100vw;
+    height: 45vh;
+    background-color: #4169E1;
+    margin-top: 242.5vh;
+}
+
+.howtohelptitlebox {
+    height: 10vh;
+    width: 98.65vw;
+    border: 0vh solid black;
+}
+
+.howtohelptitle {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: -0.7vh;
+    font-size: 10vh;
+    text-align: center;
+    text-shadow: 0.4vh 0.4vh black;
+    color: white;
+}
+
+.howtohelpoptiontext {
+    font-family: "Bebas Neue", sans-serif;
+    margin-top: 1.5vh;
+    font-size: 3.5vh;
+    text-align: center;
+    color: black;
+}
+
+.howtohelpoptionbox {
+    width: 98.5vw;
+    position: absolute;
+    height: 35vh;
+    border: 0vh solid black;
+}
+
+.howtohelpoption1 {
+    display: inline-block;
+    z-index: 2;
+    height: 7vh;
+    width: 25vw;
+    border: 0.6vh solid black;
+    border-radius: 0.5vh;
+    background-color: #1DB954;
+    float: left;
+    margin-left: 4vw;
+}
+
+.howtohelpoption1:hover,
+.howtohelpoption2:hover,
+.howtohelpoption3:hover,
+.howtohelpoption4:hover,
+.howtohelpoption5:hover {
+    background-color: #006022;
+    text-decoration: none;
+}
+
+.howtohelpoption1 a,
+.howtohelpoption2 a,
+.howtohelpoption3 a,
+.howtohelpoption4 a,
+.howtohelpoption5 a {
+    text-decoration: none;
+    color: black;
+}
+
+.howtohelpoption2 {
+    display: inline-block;
+    z-index: 2;
+    height: 12vh;
+    width: 25vw;
+    border: 0.6vh solid black;
+    border-radius: 0.5vh;
+    background-color: #1DB954;
+    margin-left: 7vw;
+}
+
+.howtohelpoption3 {
+    display: inline-block;
+    z-index: 2;
+    height: 7vh;
+    width: 25vw;
+    border: 0.6vh solid black;
+    border-radius: 0.5vh;
+    background-color: #1DB954;
+    float: right;
+    margin-right: 4vw;
+}
+
+.howtohelpoption4 {
+    display: inline-block;
+    z-index: 2;
+    height: 7vh;
+    width: 25vw;
+    border: 0.6vh solid black;
+    border-radius: 0.5vh;
+    background-color: #1DB954;
+    margin-left: 4vw;
+}
+
+.howtohelpoption5 {
+    display: inline-block;
+    z-index: 2;
+    height: 7vh;
+    width: 25vw;
+    border: 0.6vh solid black;
+    border-radius: 0.5vh;
+    background-color: #1DB954;
+    float: right;
+    margin-right: 4vw;
+}
